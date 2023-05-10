@@ -4,11 +4,11 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY", default='django-insecure-x@v(d2=3y-dwov&4*9zlqtmvl9iudhy4@60%m0nc7zp9r=d$ue')
 
 DEBUG = int(os.getenv("DEBUG", default=0))
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", default="").split(" ")
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", default="localhost").split(" ")
 
 
 # Application definition
